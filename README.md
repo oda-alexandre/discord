@@ -1,6 +1,6 @@
 # DISCORD
 
-![atom](https://raw.githubusercontent.com/oda-alexandre/discord/master/logo-discord.png) ![docker](https://raw.githubusercontent.com/oda-alexandre/discord/master/logo-docker.png)
+![discord](https://raw.githubusercontent.com/oda-alexandre/discord/master/logo-discord.png) ![docker](https://raw.githubusercontent.com/oda-alexandre/discord/master/logo-docker.png)
 
 
 ## INDEX
@@ -14,7 +14,7 @@
 
 ## BUILD DOCKER
 
-[![atom docker build](https://img.shields.io/docker/build/alexandreoda/discord.svg)](https://hub.docker.com/r/alexandreoda/discord)
+[![discord docker build](https://img.shields.io/docker/build/alexandreoda/discord.svg)](https://hub.docker.com/r/alexandreoda/discord)
 
 
 ## INTRODUCTION
