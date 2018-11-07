@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM debian:buster-slim
 
 MAINTAINER https://oda-alexandre.github.io
 
