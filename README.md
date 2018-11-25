@@ -1,6 +1,6 @@
 # DISCORD
 
-![discord](https://raw.githubusercontent.com/oda-alexandre/discord/master/logo-discord.png) ![docker](https://raw.githubusercontent.com/oda-alexandre/discord/master/logo-docker.png)
+![discord](https://raw.githubusercontent.com/oda-alexandre/discord/master/img/logo-discord.png) ![docker](https://raw.githubusercontent.com/oda-alexandre/discord/master/img/logo-docker.png)
 
 
 ## INDEX
