@@ -48,6 +48,10 @@ sudo apt-get install -f -y && \
 rm -rf discord.deb
 
 RUN sudo apt-get --purge autoremove -y \
-wget
+wget && \
+sudo apt-get autoclean -y && \
+sudo rm -rf /var/cache/apt/archives/* && \
+sudo rm -rf /var/lib/apt/lists/*
+
 
 CMD sudo service tor start && sudo service privoxy start && discord
