@@ -48,4 +48,4 @@ sudo rm /etc/apt/sources.list && \
 sudo rm -rf /var/cache/apt/archives/* && \
 sudo rm -rf /var/lib/apt/lists/*
 
-CMD discord
+CMD discord -f
