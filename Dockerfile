@@ -5,8 +5,6 @@ MAINTAINER https://oda-alexandre.github.io
 RUN apt-get update && apt-get install -y --no-install-recommends \
 sudo \
 locales \
-tor \
-privoxy \
 wget \
 apt-utils \
 ca-certificates \
@@ -38,14 +36,6 @@ USER discord
 
 WORKDIR /home/discord/
 
-RUN sudo rm -f /etc/privoxy/config && \
-sudo rm -f /etc/tor/torcc && \
-echo "listen-address localhost:8118" | sudo tee -a /etc/privoxy/config && \
-echo "forward-socks5 / localhost:9050 ." | sudo tee -a /etc/privoxy/config && \
-echo "forward-socks4 / localhost:9050 ." | sudo tee -a /etc/privoxy/config && \
-echo "forward-socks4a / localhost:9050 ." | sudo tee -a /etc/privoxy/config && \
-echo "SOCKSPort localhost:9050" | sudo tee -a /etc/tor/torcc
-
 RUN wget https://discordapp.com/api/download?platform=linux -O discord.deb && \
 sudo dpkg -i discord.deb && \
 sudo apt-get install -f -y && \
@@ -59,4 +49,4 @@ sudo rm -rf /var/cache/apt/archives/* && \
 sudo rm -rf /var/lib/apt/lists/*
 
 
-CMD sudo service tor start && sudo service privoxy start && discord
+CMD discord
