@@ -4,6 +4,7 @@ MAINTAINER https://oda-alexandre.github.io
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
 sudo \
+locales \
 tor \
 privoxy \
 wget \
@@ -25,6 +26,9 @@ libasound2-plugins \
 pulseaudio \
 pulseaudio-utils \
 libcanberra-gtk-module
+
+ENV LANG fr_FR.UTF-8
+RUN echo fr_FR.UTF-8 UTF-8 > /etc/locale.gen && locale-gen
 
 RUN useradd -d /home/discord -m discord && \
 passwd -d discord && \
