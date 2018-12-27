@@ -30,7 +30,7 @@ libcanberra-gtk-module
 ENV LANG fr_FR.UTF-8
 RUN echo fr_FR.UTF-8 UTF-8 > /etc/locale.gen && locale-gen
 
-# AJOUT DE L(UTILISATEUR
+# AJOUT DE L'UTILISATEUR
 RUN useradd -d /home/discord -m discord && \
 passwd -d discord && \
 adduser discord sudo
