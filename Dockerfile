@@ -20,7 +20,6 @@ libxss1 \
 libxtst6 \
 libappindicator1 \
 alsa-utils \
-libasound2 \
 libasound2-plugins \
 pulseaudio \
 pulseaudio-utils \
