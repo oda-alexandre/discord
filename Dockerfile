@@ -1,6 +1,10 @@
 FROM debian:stretch-slim
 
-MAINTAINER https://oda-alexandre.github.io
+MAINTAINER https://oda-alexandre.com
+
+# VARIABLES
+ENV USER discord
+ENV LANG fr_FR.UTF-8
 
 # INSTALLATION DES PREREQUIS
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -23,31 +27,30 @@ alsa-utils \
 libasound2-plugins \
 pulseaudio \
 pulseaudio-utils \
-libcanberra-gtk-module
+libcanberra-gtk-module && \
 
 # SELECTION DE LA LANGUE FRANCAISE
-ENV LANG fr_FR.UTF-8
-RUN echo fr_FR.UTF-8 UTF-8 > /etc/locale.gen && locale-gen
+echo ${LANG} > /etc/locale.gen && locale-gen && \
 
-# AJOUT DE L'UTILISATEUR
-RUN useradd -d /home/discord -m discord && \
-passwd -d discord && \
-adduser discord sudo
+# AJOUT UTILISATEUR
+useradd -d /home/${USER} -m ${USER} && \
+passwd -d ${USER} && \
+adduser ${USER} sudo
 
-# SELECTION DE L'UTILISATEUR
-USER discord
+# SELECTION UTILISATEUR
+USER ${USER}
 
-# SELECTION DE L'ESPACE DE TRAVAIL
-WORKDIR /home/discord/
+# SELECTION ESPACE DE TRAVAIL
+WORKDIR /home/${USER}
 
 # INSTALLATION DE L'APPLICATION
-RUN wget https://discordapp.com/api/download?platform=linux -O discord.deb && \
+wget https://discordapp.com/api/download?platform=linux -O discord.deb && \
 sudo dpkg -i discord.deb && \
 sudo apt-get install -f -y && \
-rm -rf discord.deb
+rm -rf discord.deb && \
 
 # NETTOYAGE
-RUN sudo apt-get --purge autoremove -y \
+sudo apt-get --purge autoremove -y \
 wget && \
 sudo apt-get autoclean -y && \
 sudo rm /etc/apt/sources.list && \

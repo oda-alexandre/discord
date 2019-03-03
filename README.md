@@ -1,25 +1,32 @@
 # DISCORD
 
-![discord](https://raw.githubusercontent.com/oda-alexandre/discord/master/img/logo-discord.png) ![docker](https://raw.githubusercontent.com/oda-alexandre/discord/master/img/logo-docker.png)
+[![dockeri.co](https://dockeri.co/image/alexandreoda/discord)](https://hub.docker.com/r/alexandreoda/discord)
 
 
 ## INDEX
 
-- [Build Docker](#BUILD)
+- [Badges](#BADGES)
 - [Introduction](#INTRODUCTION)
 - [Prerequis](#PREREQUIS)
 - [Installation](#INSTALLATION)
 - [License](#LICENSE)
 
 
-## BUILD DOCKER
+## BADGES
 
-[![discord docker build](https://img.shields.io/docker/build/alexandreoda/discord.svg)](https://hub.docker.com/r/alexandreoda/discord)
+[![version](https://images.microbadger.com/badges/version/alexandreoda/discord.svg)](https://microbadger.com/images/alexandreoda/discord)
+[![size](https://images.microbadger.com/badges/image/alexandreoda/discord.svg)](https://microbadger.com/images/alexandreoda/discord")
+[![build](https://img.shields.io/docker/build/alexandreoda/discord.svg)](https://hub.docker.com/r/alexandreoda/discord)
+[![automated](https://img.shields.io/docker/automated/alexandreoda/discord.svg)](https://hub.docker.com/r/alexandreoda/discord)
 
 
 ## INTRODUCTION
 
-Ce repository contient le fichier Dockerfile de [Discord](https://discordapp.com/) pour [docker](https://www.docker.com), mis à jour automatiquement dans le [docker hub](https://hub.docker.com/r/alexandreoda/discord/) public.
+Ce repository contient le fichier Dockerfile de
+
+- [Discord](https://discordapp.com/)
+
+Mis à jour automatiquement dans le [docker hub public](https://hub.docker.com/r/alexandreoda/discord/).
 
 
 ## PREREQUIS
