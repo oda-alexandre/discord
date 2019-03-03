@@ -44,7 +44,7 @@ USER ${USER}
 WORKDIR /home/${USER}
 
 # INSTALLATION DE L'APPLICATION
-wget https://discordapp.com/api/download?platform=linux -O discord.deb && \
+RUN wget https://discordapp.com/api/download?platform=linux -O discord.deb && \
 sudo dpkg -i discord.deb && \
 sudo apt-get install -f -y && \
 rm -rf discord.deb && \
