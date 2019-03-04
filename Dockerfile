@@ -27,6 +27,7 @@ alsa-utils \
 libasound2-plugins \
 pulseaudio \
 pulseaudio-utils \
+libgtk-3-0 \
 libcanberra-gtk-module && \
 
 # SELECTION DE LA LANGUE FRANCAISE
