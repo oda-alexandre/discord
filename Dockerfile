@@ -3,8 +3,8 @@ FROM debian:stretch-slim
 MAINTAINER https://oda-alexandre.com
 
 # VARIABLES
-ENV USER discord \
-LANG fr_FR.UTF-8
+ENV USER discord
+ENV LANG fr_FR.UTF-8
 
 # INSTALLATION DES PREREQUIS
 RUN apt-get update && apt-get install -y --no-install-recommends \
