@@ -5,6 +5,7 @@ MAINTAINER https://oda-alexandre.com
 # VARIABLES
 ENV USER discord
 ENV LANG fr_FR.UTF-8
+ENV VERSION 0.0.9
 
 # INSTALLATION DES PREREQUIS
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -45,7 +46,7 @@ USER ${USER}
 WORKDIR /home/${USER}
 
 # INSTALLATION DE L'APPLICATION
-RUN wget https://discordapp.com/api/download?platform=linux -O discord.deb && \
+RUN wget https://dl.discordapp.net/apps/linux/${VERSION}/discord-${VERSION}.deb -O discord.deb && \
 sudo dpkg -i discord.deb && \
 sudo apt-get install -f -y && \
 rm -rf discord.deb && \
