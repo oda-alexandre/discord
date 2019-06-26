@@ -1,6 +1,6 @@
 # DISCORD
 
-[![dockeri.co](https://dockeri.co/image/alexandreoda/discord)](https://hub.docker.com/r/alexandreoda/discord)
+<img src="https://fontmeme.com/images/discord-logo-font.png" />
 
 
 ## INDEX
@@ -14,10 +14,7 @@
 
 ## BADGES
 
-[![version](https://images.microbadger.com/badges/version/alexandreoda/discord.svg)](https://microbadger.com/images/alexandreoda/discord)
-[![size](https://images.microbadger.com/badges/image/alexandreoda/discord.svg)](https://microbadger.com/images/alexandreoda/discord")
-[![build](https://img.shields.io/docker/build/alexandreoda/discord.svg)](https://hub.docker.com/r/alexandreoda/discord)
-[![automated](https://img.shields.io/docker/automated/alexandreoda/discord.svg)](https://hub.docker.com/r/alexandreoda/discord)
+[![pipeline status](https://gitlab.com/oda-alexandre/discord/badges/master/pipeline.svg)](https://gitlab.com/oda-alexandre/discord/commits/master)
 
 
 ## INTRODUCTION
