@@ -1,5 +1,7 @@
+# IMAGE TO USE
 FROM debian:stretch-slim
 
+# MAINTAINER
 MAINTAINER https://www.oda-alexandre.com/
 
 # VARIABLES
@@ -7,7 +9,7 @@ ENV USER discord
 ENV LANG fr_FR.UTF-8
 ENV VERSION 0.0.9
 
-# INSTALLATION DES PREREQUIS
+# INSTALL PACKAGES
 RUN apt-get update && apt-get install -y --no-install-recommends \
 sudo \
 locales \
@@ -31,27 +33,27 @@ pulseaudio-utils \
 libgtk-3-0 \
 libcanberra-gtk-module && \
 
-# SELECTION DE LA LANGUE FRANCAISE
+# CHANGE LOCALES
 echo ${LANG} > /etc/locale.gen && locale-gen && \
 
-# AJOUT UTILISATEUR
+# ADD USER
 useradd -d /home/${USER} -m ${USER} && \
 passwd -d ${USER} && \
 adduser ${USER} sudo
 
-# SELECTION UTILISATEUR
+# SELECT USER
 USER ${USER}
 
-# SELECTION ESPACE DE TRAVAIL
+# SELECT WORKING SPACE
 WORKDIR /home/${USER}
 
-# INSTALLATION DE L'APPLICATION
+# INSTALL APP
 RUN wget https://dl.discordapp.net/apps/linux/${VERSION}/discord-${VERSION}.deb -O discord.deb && \
 sudo dpkg -i discord.deb && \
 sudo apt-get install -f -y && \
 rm -rf discord.deb && \
 
-# NETTOYAGE
+# CLEANING
 sudo apt-get --purge autoremove -y \
 wget && \
 sudo apt-get autoclean -y && \
@@ -59,5 +61,5 @@ sudo rm /etc/apt/sources.list && \
 sudo rm -rf /var/cache/apt/archives/* && \
 sudo rm -rf /var/lib/apt/lists/*
 
-# COMMANDE AU DEMARRAGE DU CONTENEUR
+# START THE CONTAINER
 CMD discord
