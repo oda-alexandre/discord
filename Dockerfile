@@ -62,4 +62,4 @@ sudo rm -rf /var/cache/apt/archives/* && \
 sudo rm -rf /var/lib/apt/lists/*
 
 # START THE CONTAINER
-CMD discord
+CMD discord \
