@@ -7,7 +7,7 @@
 
 - [Badges](#BADGES)
 - [Introduction](#INTRODUCTION)
-- [PREREQUISITESites](#PREREQUISITESITES)
+- [Prerequisites](#PREREQUISITESITES)
 - [Install](#INSTALL)
 - [License](#LICENSE)
 
@@ -27,7 +27,7 @@ Continuous integration on :
 
 - [gitlab](https://gitlab.com/oda-alexandre/discord/pipelines)
 
-automatically updated on :
+Automatically updated on :
 
 - [docker hub public](https://hub.docker.com/r/alexandreoda/discord/).
 
