@@ -1,6 +1,6 @@
 # DISCORD
 
-<img src="https://fontmeme.com/images/discord-logo-font.png" />
+<img src="https://fontmeme.com/images/discord-logo-font.png" width="200" height="200"/>
 
 
 ## INDEX
