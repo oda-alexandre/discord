@@ -1,13 +1,13 @@
 FROM debian:stretch-slim
 
-MAINTAINER https://www.oda-alexandre.com/
+LABEL authors https://www.oda-alexandre.com/
 
 ENV USER discord
 ENV LANG fr_FR.UTF-8
 ENV VERSION 0.0.9
 
 RUN echo -e '\033[36;1m ******* INSTALL PACKAGES ******** \033[0m' && \
-apt-get update && apt-get install -y --no-install-recommends \
+apt update && apt install -y --no-install-recommends \
 sudo \
 locales \
 wget \
@@ -47,7 +47,7 @@ WORKDIR /home/${USER}
 RUN echo -e '\033[36;1m ******* INSTALL APP ******** \033[0m' && \
 wget https://dl.discordapp.net/apps/linux/${VERSION}/discord-${VERSION}.deb -O discord.deb && \
 sudo dpkg -i discord.deb && \
-sudo apt-get install -f -y && \
+sudo apt install -f -y && \
 rm -rf discord.deb
 
 RUN echo -e '\033[36;1m ******* CLEANING ******** \033[0m' && \
