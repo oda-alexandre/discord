@@ -1,6 +1,6 @@
 # DISCORD
 
-<img src="https://fontmeme.com/images/discord-logo-font.png" width="200" height="200"/>
+<img src="https://assets.gitlab-static.net/uploads/-/system/project/avatar/12904441/discord.png" width="200" height="200"/>
 
 ## INDEX
 
