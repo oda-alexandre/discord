@@ -5,7 +5,7 @@ LABEL authors https://www.oda-alexandre.com
 ENV USER discord
 ENV HOME /home/${USER}
 ENV LOCALES fr_FR.UTF-8
-ENV VERSION 0.0.9
+ENV VERSION 0.0.10
 
 RUN echo -e '\033[36;1m ******* INSTALL PACKAGES ******** \033[0m' && \
   apt-get update && apt-get install -y --no-install-recommends \
