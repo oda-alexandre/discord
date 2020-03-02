@@ -4,13 +4,11 @@ LABEL authors https://www.oda-alexandre.com
 
 ENV USER discord
 ENV HOME /home/${USER}
-ENV LOCALES fr_FR.UTF-8
 ENV VERSION 0.0.10
 
 RUN echo -e '\033[36;1m ******* INSTALL PACKAGES ******** \033[0m' && \
   apt-get update && apt-get install -y --no-install-recommends \
   sudo \
-  locales \
   wget \
   apt-utils \
   ca-certificates \
@@ -30,9 +28,6 @@ RUN echo -e '\033[36;1m ******* INSTALL PACKAGES ******** \033[0m' && \
   pulseaudio-utils \
   libgtk-3-0 \
   libcanberra-gtk-module
-
-RUN echo -e '\033[36;1m ******* CHANGE LOCALES ******** \033[0m' && \
-  locale-gen ${LOCALES}
 
 RUN echo -e '\033[36;1m ******* ADD USER ******** \033[0m' && \
   useradd -d ${HOME} -m ${USER} && \
