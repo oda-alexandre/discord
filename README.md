@@ -1,6 +1,6 @@
 # DISCORD
 
-<img src="https://assets.gitlab-static.net/uploads/-/system/project/avatar/12904441/discord.png" width="200" height="200"/>
+![logo](https://assets.gitlab-static.net/uploads/-/system/project/avatar/12904441/discord.png)
 
 ## INDEX
 
@@ -17,11 +17,9 @@
 
 [![pipeline status](https://gitlab.com/oda-alexandre/discord/badges/master/pipeline.svg)](https://gitlab.com/oda-alexandre/discord/commits/master)
 
-
 ## FIRST UPDATE
 
 Date: 01-01-01
-
 
 ## INTRODUCTION
 
