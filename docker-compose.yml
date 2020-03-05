@@ -1,0 +1,21 @@
+version: "3.7"
+
+services:
+  discord:
+    container_name: discord
+    image: alexandreoda/discord
+    restart: "no"
+    privileged: false
+    cap_add:
+      - SYS_ADMIN
+    devices:
+      - /dev/snd
+    environment:
+      - DISPLAY
+      - PULSE_SERVER=unix:${XDG_RUNTIME_DIR}/pulse/native
+    volumes:
+      - "${HOME}:/home/discord"
+      - "/tmp/.X11-unix/:/tmp/.X11-unix/"
+      - "/dev/shm:/dev/shm"
+      - "/var/run/dbus:/var/run/dbus"
+      - "${XDG_RUNTIME_DIR}/pulse/native:${XDG_RUNTIME_DIR}/pulse/native"
