@@ -3,11 +3,10 @@
 ![logo](https://assets.gitlab-static.net/uploads/-/system/project/avatar/12904441/discord.png)
 
 - [DISCORD](#discord)
-  - [INDEX](#index)
   - [BADGES](#badges)
   - [INTRODUCTION](#introduction)
   - [PREREQUISITES](#prerequisites)
-  - [INSTALL](#install)
+  - [BUILD](#build)
     - [DOCKER RUN](#docker-run)
     - [DOCKER COMPOSE](#docker-compose)
   - [LICENSE](#license)
@@ -51,6 +50,7 @@ docker run -d \
 -v /dev/shm:/dev/shm \
 -v /var/run/dbus:/var/run/dbus \
 -v ${XDG_RUNTIME_DIR}/pulse/native:${XDG_RUNTIME_DIR}/pulse/native \
+-v /etc/localtime:/etc/localtime:ro \
 alexandreoda/discord
 ```
 
@@ -78,6 +78,7 @@ services:
       - "/dev/shm:/dev/shm"
       - "/var/run/dbus:/var/run/dbus"
       - "${XDG_RUNTIME_DIR}/pulse/native:${XDG_RUNTIME_DIR}/pulse/native"
+      - "/etc/localtime:/etc/localtime:ro"
 ```
 
 ## LICENSE
